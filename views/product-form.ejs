@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>
+        <%= formTitle %>
+    </h2>
+    <form action="<%= formAction %>" method="POST" enctype="multipart/form-data">
+        <input type="text" name="productName" placeholder="Name" value="<%= product?.productName || '' %>" required />
+        <input type="number" name="price" placeholder="Price" value="<%= product?.price || '' %>" required />
+        <input type="text" name="description" placeholder="Description" value="<%= product?.description || '' %>"
+            required />
+        <input type="text" name="category" placeholder="Category" value="<%= product?.category || '' %>" />
+        <input type="number" name="stock" placeholder="Stock" value="<%= product?.stock || 0 %>" />
+        <input type="file" name="img" />
+        <button type="submit">Submit</button>
+    </form>
+
+</body>
+
+</html>
